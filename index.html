@@ -20,14 +20,12 @@
             <button onclick="showResult('Jochen-Schweizer-Gutschein')">Ja</button>
             <button onclick="showResult('Jochen-Schweizer-Gutschein')">Nein</button>
         </div>
-
         <div class="question" id="question2-no1" style="display: none;">
             <p>Wie braun willst du werden?</p>
             <img id="question2-img" src="Spongebob_braun.jpg" alt="Braun Bild">
             <button onclick="showResult('Urlaub in Barcelona')">Sehr braun</button>
-            <button onclick="showResult('question1', 'no2')">Nächstes Jahr wieder</button>
+            <button onclick="nextQuestion('question2-no1', 'no2')">Nächstes Jahr wieder</button>
         </div>
-
         <div class="question" id="question2-no2" style="display: none;">
             <p>Magst du Entspannung?</p>
             <button onclick="showResult('Urlaub in Barcelona')">Ja</button>
