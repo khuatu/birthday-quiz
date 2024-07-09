@@ -10,23 +10,25 @@
     <h1 id="quiz-title">Geburtstagsgeschenk-Quiz</h1>
     <div id="quiz">
         <div class="question" id="question1">
-            <p>Bist du abenteuerlustig?</p>
             <img id="question1-img" src="patrick_star_swimming.jpg" alt="Patrick Star Bild">
+            <p>Bist du abenteuerlustig?</p>
             <button onclick="nextQuestion('question1', 'yes1')">Ja</button>
             <button onclick="nextQuestion('question1', 'no1')">Nein</button>
         </div>
         <div class="question" id="question2-yes1" style="display: none;">
+            <img id="question2-img-yes1" src="another_image.jpg" alt="Ein anderes Bild">
             <p>Magst du Outdoor-Aktivitäten?</p>
             <button onclick="showResult('Jochen-Schweizer-Gutschein')">Ja</button>
             <button onclick="showResult('Jochen-Schweizer-Gutschein')">Nein</button>
         </div>
         <div class="question" id="question2-no1" style="display: none;">
+            <img id="question2-img-no1" src="Spongebob_braun.jpg" alt="Braun Bild">
             <p>Wie braun willst du werden?</p>
-            <img id="question2-img" src="Spongebob_braun.jpg" alt="Braun Bild">
             <button onclick="showResult('Urlaub in Barcelona')">Sehr braun</button>
             <button onclick="nextQuestion('question2-no1', 'no2')">Nächstes Jahr wieder</button>
         </div>
         <div class="question" id="question2-no2" style="display: none;">
+            <img id="question2-img-no2" src="another_image.jpg" alt="Ein anderes Bild">
             <p>Magst du Entspannung?</p>
             <button onclick="showResult('Urlaub in Barcelona')">Ja</button>
             <button onclick="showResult('Jochen-Schweizer-Gutschein')">Nein</button>
