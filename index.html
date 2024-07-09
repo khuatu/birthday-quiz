@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geburtstagsgeschenk-Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Geburtstagsgeschenk-Quiz</h1>
+    <div id="quiz">
+        <div class="question" id="question1">
+            <p>Bist du abenteuerlustig?</p>
+            <button onclick="nextQuestion('question1', 'yes1')">Ja</button>
+            <button onclick="nextQuestion('question1', 'no1')">Nein</button>
+        </div>
+        <div class="question" id="question2-yes1" style="display: none;">
+            <p>Magst du Outdoor-Aktivitäten?</p>
+            <button onclick="showResult('Jochen-Schweizer-Gutschein')">Ja</button>
+            <button onclick="showResult('Jochen-Schweizer-Gutschein')">Nein</button>
+        </div>
+        <div class="question" id="question2-no1" style="display: none;">
+            <p>Magst du Entspannung?</p>
+            <button onclick="showResult('Urlaub in Barcelona')">Ja</button>
+            <button onclick="showResult('Jochen-Schweizer-Gutschein')">Nein</button>
+        </div>
+    </div>
+    <div id="result" class="result" style="display: none;"></div>
+
+    <script>
+        function nextQuestion(currentQuestionId, nextQuestionId) {
+            document.getElementById(currentQuestionId).style.display = 'none';
+            document.getElementById('question2-' + nextQuestionId).style.display = 'block';
+        }
+
+        function showResult(result) {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('result').innerText = 'Dein Geschenk ist: ' + result;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
